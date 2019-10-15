@@ -1,33 +1,87 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!DOCTYPE html>
+<html>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Word Guess Game</title>
-  </head>
-  <body>
-    <h1>Animal Kingdom</h1>
-    <p>Guess the name of the animal and hear the sound it makes!</p>
-    <p id="fun-fact"></p>
-    <span id="current-name"></span>
-    <p id="guesses-remaining"></p>
-    <p id="letters-already-guessed"></p>
-    <p id="wins"></p>
-    <p id="losses"></p>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ANIMAL SOUNDS GUESSING GAME</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+</head>
+
+<body>
+    <!--Main Heading-->
+    <div class="heading">
+        <h1>ANIMAL SOUNDS</h1>
+    </div>
+
+    <div class="background">
+        <div class="container">
+
+            <!--Changing Image based on correct answers-->
+            <h2>Press Any Key To Guess This Animal!</h2>
+            <div>
+                <img id="image" src="./assets/images/arrow.gif" width="40%" height="200">
+            </div>
+
+            <!--Current Word Container-->
+            <div>
+                <h3 id="currentword">_ _ _ _ _</h3>
+            </div>
+            <div id="scoreboard">
+                <!--Guesses left Container-->
+                <div class="sidebar">
+                    <h3>GUESSES LEFT:
+                        <span id="guessesremaining"></span>
+                    </h3>
+                </div>
+
+                <!--Wins counter Container-->
+                <div class="sidebar">
+                    <h3>WINS:
+                        <span id="winstracker"></span>
+                    </h3>
+                </div>
+                <!--Loss counter Container-->
+                <div class="sidebar">
+                    <h3>LOSSES:
+                        <span id="losstracker"></span>
+                    </h3>
+                </div>
+
+                <!--Wrong guesses container-->
+                <div class="sidebar">
+                    <h3>LETTERS YOU GUESSED WRONG:
+                        <span id="playerguesses"></span>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--AUDIO FILES-->
+    <div>
+        <!--arthur-->
+        <audio id="sheep">
+            <source src="https://www.google.com/logos/fnbx/animal_sounds/sheep.mp3" type="audio/mp3">
+        </audio>
+        <!--rugrats-->
+        <audio id="swan">
+            <source src="https://www.google.com/logos/fnbx/animal_sounds/swan.mp3" type="audio/mp3">
+        </audio>
+       
+    </div>
+
+
 
 
     <script src="javascript/game.js"></script>
+    
+</body>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
 </html>
