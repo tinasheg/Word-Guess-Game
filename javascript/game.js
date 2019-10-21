@@ -14,13 +14,8 @@ var losses = 0;
 var guessesRemaining = 9;
 
 
-
-
-//__________________________________________________________
-//GAME START FUNCTION
-//__________________________________________________________
 function Game() {
-    //computer generates random word from words array
+  
     randomWord = words[Math.floor(Math.random() * words.length)];
 
     // split the individual word into separate arrays, and store in new array 
@@ -43,11 +38,7 @@ function Game() {
     console.log(blanks)
     console.log(blanksAndCorrect)
 }
-//__________________________________________________________
-//AUDIO FUNCTION
-//__________________________________________________________
 
-//variables for audio function
 var sheep = document.getElementById("sheep");
 var swan = document.getElementById("swan");
 
@@ -58,32 +49,25 @@ function aud() {
     if (randomWord === words[0]) {
         swan.pause();
         sheep.play();
-        document.getElementById("image").href = "https://www.google.com/logos/fnbx/animal_sounds/sheep.png";
+        document.createAttribute("image").src = "images/sheep.png";
     }
     //Swan Audio & Image
     //---------------------------
     else if (randomWord === words[1]) {
         sheep.pause();
         swan.play();
-        document.getElementById("image").href = "https://www.google.com/logos/fnbx/animal_sounds/swan.png";
+        document.getElementById("image").src = "images/swan.png";
     }
 
     
 };
 
-//__________________________________________________________
-//RESET FUNCTION
-//__________________________________________________________
 function reset() {
     guessesRemaining = 9;
     wrongGuess = [];
     blanksAndCorrect = [];
     Game()
 }
-
-//__________________________________________________________
-//CHECK LETTERS/COMPARE FUNCTION
-//__________________________________________________________
 
 //If/Else, to see if letter selected matches random word
 function checkLetters(letter) {
@@ -110,11 +94,6 @@ function checkLetters(letter) {
     }
     console.log(blanksAndCorrect);
 }
-
-//__________________________________________________________
-//FINAL COMPLETE FUNCTION
-//__________________________________________________________
-
 //check to see if player won...
 function complete() {
     console.log("wins:" + wins + "| losses:" + losses + "| guesses left:" + guessesRemaining)
